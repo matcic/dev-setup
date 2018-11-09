@@ -18,14 +18,32 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew install node
+# brew install node
+
+fancy_echo() {
+  local fmt="$1"; shift
+
+  # shellcheck disable=SC2059
+  printf "\\n$fmt\\n" "$@"
+}
+
+fancy_echo "Installing nvm..."
+# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+fancy_echo "nvm installed!"
+fancy_echo "Installing latest node..."
+nvm install node
+fancy_echo "node installed!"
+nvm alias default node
+fancy_echo "Installing Yarn..."
+brew install yarn --without-node
+fancy_echo "Yarn installed!"
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
-npm install -g coffee-script
-npm install -g grunt-cli
-npm install -g jshint
-npm install -g less
+# npm install -g coffee-script
+# npm install -g grunt-cli
+# npm install -g jshint
+# npm install -g less
 
 #gem install jekyll

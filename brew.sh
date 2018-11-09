@@ -49,18 +49,18 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+#brew install ringojs
+#brew install narwhal
 
 # Install Python
 brew install python
 brew install python3
 
 # Install ruby-build and rbenv
-brew install ruby-build
-brew install rbenv
-LINE='eval "$(rbenv init -)"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+#brew install ruby-build
+#brew install rbenv
+#LINE='eval "$(rbenv init -)"'
+#grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -102,38 +102,59 @@ brew install homebrew/x11/xpdf
 brew install xz
 
 # Install other useful binaries.
+# Search tool like grep, but optimized for programmers
 brew install ack
 brew install dark-mode
 #brew install exiv2
 brew install git
+# Git extension for versioning large files
 brew install git-lfs
+# Extensions to follow Vincent Driessen's branching model
 brew install git-flow
+# Small git utilities
 brew install git-extras
+# Add GitHub support to git on the command-line
 brew install hub
+# Tools and libraries to manipulate images in many formats
 brew install imagemagick --with-webp
-brew install lua
-brew install lynx
+# Powerful, lightweight programming language
+#brew install lua
+# Text-based web browser
+#brew install lynx
+# 7-Zip (high compression file archiver) implementation
 brew install p7zip
+# Parallel gzip
 brew install pigz
+# Monitor data's progress through a pipe
 brew install pv
+# Perl-powered file rename script with many helpful built-ins
 brew install rename
-brew install rhino
+# JavaScript engine
+#brew install rhino
+# Command-line interface for https://speedtest.net bandwidth tests
 brew install speedtest_cli
+# Add a public key to a remote machine's authorized_keys file
 brew install ssh-copy-id
+# Display directories as trees (with optional color/HTML output)
 brew install tree
+# Create screenshots of webpages from the terminal
 brew install webkit2png
+# New zlib (gzip, deflate) compatible compressor
 brew install zopfli
 brew install pkg-config libffi
+# Swiss-army knife of markup format conversion
 brew install pandoc
 
 # Lxml and Libxslt
+# GNOME XML library
 brew install libxml2
+# C XSLT library for GNOME
 brew install libxslt
 brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 heroku update
 
 # Core casks
@@ -143,10 +164,11 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" atom
+#brew cask install --appdir="/Applications" sublime-text
+#brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
+#brew cask install --appdir="/Applications" vagrant
+# Markdown editor
 brew cask install --appdir="/Applications" macdown
 
 # Misc casks
@@ -155,17 +177,20 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
+#brew cask install --appdir="/Applications" evernote
+#brew cask install --appdir="/Applications" 1password
 #brew cask install --appdir="/Applications" gimp
 #brew cask install --appdir="/Applications" inkscape
-
+brew cask install --appdir="/Applications" istat-menus
+brew cask install --appdir="/Applications" spotify
+brew cask install --appdir="/Applications" spectacle
+brew cask install --appdir="/Applications" gitkraken
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
 # Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
+brew install docker docker-compose
+#brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
